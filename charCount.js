@@ -1,20 +1,20 @@
-var letters = {};
+
 
 function countLetters(string) {
+  var letters = {};
   string =  string.replace(/\s/g,'').split('');
-for (var i = 0; i < string.length; i++) {
-
-  if (letters[string[i]]) {
-    letters[string[i]] += 1;
-  } else {
-    letters[string[i]] = 1;
+  for (var i = 0; i < string.length; i++) {
+    var char = string[i];
+    if (letters[char]) {
+      letters[char] += 1;
+    } else {
+    letters[char] = 1;
+    }
   }
-
-}
-  console.log(letters);
+  return(letters);
 }
 
-countLetters('lighthouse in the house');
+console.log(countLetters('lighthouse in the house'));
 
 
 
